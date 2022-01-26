@@ -4,9 +4,9 @@ import { HeroCard } from './HeroCard';
 export const HeroList = ({publisher}) => {
 
     const heroes = getHeroesByPublisher( publisher )
-    console.log(heroes);
+    
     return (
-        <div className='mt-2'>
+        <div className='mt-2 row'>
             {
                 heroes.map( hero => (
                     <HeroCard 
@@ -14,9 +14,7 @@ export const HeroList = ({publisher}) => {
                         {...hero} 
                     />
                 ))
-            }
-                          
-
+            }             
         </div>
   )
 };
