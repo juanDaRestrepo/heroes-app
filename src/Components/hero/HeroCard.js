@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const HeroCard = ({id,superhero,publisher,alter_ego,first_appearance,characters}) => {
+export const HeroCard = ({id,superhero,publisher,alter_ego,first_appearance,characters,search}) => {
   
     const imagePath= `/assets/heroes/${id}.jpg`;
 
-  return <div className="col-4">
+  return <div className={search?'col-12 animate__animated animate__fadeIn':'col-4 animate__animated animate__fadeIn'}>
             <div className="card mb-3" >
                 <div className="row g-0">
                     <div className="col-md-5">
