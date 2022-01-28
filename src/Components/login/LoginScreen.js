@@ -22,7 +22,9 @@ export const LoginScreen = () => {
     }
     dispatch(action)
 
-    navigate('/', {
+    const lastPath = localStorage.getItem('lastPath') || '/'
+
+    navigate(lastPath, {
       replace: true
     })
   }
